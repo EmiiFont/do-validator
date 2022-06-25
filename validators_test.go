@@ -39,6 +39,7 @@ func TestIsCedula(t *testing.T) {
 		{name: "invalid with slash", input: "223-0087823-1", want: false},
 		{name: "less than 11 characters", input: "223-0087823", want: false},
 		{name: "valid without slash", input: "22300878232", want: true},
+		{name: "valid from exception list", input: "11111111123", want: true},
 	}
 
 	for _, tt := range tests {
